@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>RentCarPresentacion</RootNamespace>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\RentCar_Entidades\RentCar_Entidades.csproj" />
+		<ProjectReference Include="..\RentCar_Negocio\RentCar_Negocio.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="ReportViewerCore.WinForms" Version="15.1.33" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="Reportes\*.rdlc">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>

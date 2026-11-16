@@ -1,0 +1,21 @@
+RENTCAR (C# Windows Forms, .NET 8, SQL Server, 3 capas) - v4
+
+SCRIPTS (SSMS, en este orden, sobre la base RentCar):
+   1) BaseDeDatos\RentCar_Desde_Cero.sql              (crea la base y las tablas; BORRA la base RentCar si existe)
+   2) BaseDeDatos\RolesCliente.sql           (cuentas de cliente + usuario interno de reservas)
+   3) BaseDeDatos\MejorasAutenticacion.sql   (estado, rol, correo unico, claves de prueba nuevas)
+Leer siempre la pestaña MENSAJES de SSMS.
+
+PROYECTO: abrir RentCar.sln desde una carpeta corta (C:\RentCar), compilar (Ctrl+Shift+B) y ejecutar (F5).
+
+USUARIOS DE PRUEBA (contraseña: RentCar2026)
+   admin      (Empleado / Administrador)  -> panel completo
+   operador   (Empleado / Operador)       -> panel de operación
+   cliente1   (Cliente)                   -> portal de reservas
+Si su servidor no es LocalDB, cambie la cadena en RentCar_Datos\Conexion.cs.
+
+v5 - OBSERVACIONES DEL DOCENTE
+   4) BaseDeDatos\Observaciones_Docente.sql   (usuario unico en todo el sistema, una cuenta por persona, formato de CI)
+   - Login unico: ya no se elige Cliente/Empleado; el sistema detecta el rol.
+   - Diseno nuevo: menu lateral, ventanas dentro del mismo marco, buscador en cada tabla, botones redondeados.
+   - Nombres y apellidos se guardan con mayuscula inicial; el CI se valida al crear.
